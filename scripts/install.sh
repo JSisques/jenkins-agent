@@ -35,7 +35,7 @@ fi
 
 # Variables
 JENKINS_AGENT_NAME="jenkins-agent"
-JENKINS_AGENT_WORKDIR="/home/$USER/jenkins"
+JENKINS_AGENT_WORKDIR="/home/$USER/jenkins-agent"
 AGENT_JAR_URL="http://$JENKINS_MASTER_IP:8080/jnlpJars/agent.jar"
 SSH_USER="$USER"
 

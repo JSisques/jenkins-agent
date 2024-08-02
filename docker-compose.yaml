@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  jenkins-agent:
+    image: jenkins/inbound-agent:latest
+    container_name: jenkins-agent
+    hostname: jenkins-agent
+    environment:
+      JENKINS_URL: ${JENKINS_URL}
+      JENKINS_AGENT_NAME: ${AGENT_NAME}
+      JENKINS_SECRET: ${AGENT_SECRET}
+    volumes:
+      - ./home/jenkins/agent:/home/jenkins/agent
+    restart: unless-stopped
